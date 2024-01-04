@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+html, body {
+  background: (#fff);
+}
+
+.d3 {
+  margin: 0.5em 0;
+  
+  font-size:2em;
+  color: #22313F ;
+  text-align: left;
+ 
+  letter-spacing: 0.03em;
+  text-shadow: -0.07em 0 0 #F22613,  0.07em 0 0 #00FFFF;
+}
+
+</style>
+    </head>
+    <body>
+        <h1 class="d3">
+//Full adder using structural modeling <br>
+module full_adder_s (<br>
+    input a,b,cin,<br>
+    output sum,carry<br>
+);<br>
+
+wire w1,w2,w3,w4;       //Internal connections<br>
+
+xor(w1,a,b);<br>
+xor(sum,w1,cin);        //Sum output<br>
+
+and(w2,a,b);<br>
+and(w3,b,cin);<br>
+and(w4,cin,a);<br>
+
+or(carry,w2,w3,w4);     //carry output<br>
+
+endmodule<br>
+
+
+</h1>
+    </body>
+</html>

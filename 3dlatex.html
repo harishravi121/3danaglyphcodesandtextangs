@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+html, body {
+  background: (#fff);
+}
+
+.d3 {
+  margin: 0.5em 0;
+  
+  font-size:2.5em;
+  color: #22313F ;
+  text-align: left;
+  
+  letter-spacing: 0.03em;
+  text-shadow: -0.07em 0 0 #F22613,  0.07em 0 0 #00FFFF;
+}
+
+</style>
+    </head>
+    <body>
+        <h1 class="d3">
+<pre>
+\documentclass[twocolumn]{revtex4-1}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+
+
+\begin{document}
+\title{ Blood concentration}
+\author{Harish Ravi}
+
+\section{Introduction}
+Medications are used in several treatments. Its useful to know the blood concentration given a half life, dosage and weight. We can even find blood concentration of nutrients with this formula. 
+
+
+$$D=Doseagemg/(Weightkg*0.068)$$
+D is in ug/ml. It assumes 5 liters of blood for a weight of 80 kg, where the exact coefficient of volume comes from Wikipedia.
+
+$$x=(x+D)e^{-t/\tau}$$
+$$x=De^{-t/\tau}/(1-e^{-t/\tau})$$
+$$Avg=\int_{0}^{24}(x+D)e^{-t/\tau}dt/24$$
+$$t_{1/2}=\tau/\ln 2$$
+$$Avg=Dt_{1/2}/16.63$$
+$$Avg (ug/ml)=Dosagemg/Wieghtkg*t_{1/2}/1.131$$
+where dosage is in mg, weight in kg, $t_{1/2}$ in hrs. If the percentage absorption is $P$ , 
+$$Avg (ug/ml)=Dosagemg/Wieghtkg*t_{1/2}/1.131*P$$
+
+If there are $N$ doses, its simply multiplied by it.
+$$Avg (ug/ml)=N*Dosagemg/Wieghtkg*t_{1/2}/1.131*P$$
+An example would be 500 mg , 1 dose per day with a 70\% absorption, a body weight of 80 kg and a half life of 14 hrs. It gives a blood level of 54.16 ug/ml if taken daily. This reading was verified with a real blood test for valproate within 10\% error.
+
+
+  </h1>
+    </body>
+</html>
