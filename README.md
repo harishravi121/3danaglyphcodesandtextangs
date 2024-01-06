@@ -7,4 +7,4 @@ The teacher would have to show it on monitor and students wear glasses? Also 3d 
 Improved from https://codemyui.com/anaglyph-3d-red-blue-text-effect/
 
 
-Language 3d lang codes and texts have to spoken out and recorded for best effects. I will put a few online.
+Language 3d lang codes and texts have to spoken out and recorded for best effects. I will put a few online. Thanks to google translate too!
